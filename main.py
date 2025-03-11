@@ -30,7 +30,9 @@ def hexToDec(hex):
         "E": 14,
         "F": 15
     }
+    # exponent to raise 16 to
     expo = len(hex) - 1
+    #
     if expo == 0:
         return hex_values[hex]
     else:
@@ -54,5 +56,11 @@ def decToBin(dec):
     end_string += str(dec % 2)
 
 
-value = int(input("Please input a hexadecimal value: "))
-print(decToHex(value))
+dec_value = int(input("Please input a decimal value: "))
+hex_value = input("Please input a hexadecimal value: ")
+bin_value = input("Please input a binary value: ")
+
+print(decToHex(dec_value))
+print(hexToDec(hex_value))
+print(decToBin(dec_value))
+print(binToDec(bin_value))
